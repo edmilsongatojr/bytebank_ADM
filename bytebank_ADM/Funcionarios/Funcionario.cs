@@ -25,6 +25,10 @@
             return Salario * 0.1;
         }
 
+        public double getSalario()
+        {
+            return Salario = 2000;
+        }
     }
 
 }

@@ -14,5 +14,10 @@
            
             
         }
+
+        public double getSalario()
+        {
+            return Salario = 7000;
+        }
     }
 }
