@@ -7,20 +7,20 @@ Console.WriteLine("=====================================================");
 GerenciadorDeBonificacao gerenciador = new();
 GerenciadorDeSalarios gerenciadorDeSalarios = new();
 
-Funcionario pedro = new();
+Funcionario pedro = new("123456789-48",2000.00);
 pedro.Nome = "João";
-pedro.Cpf = "123456789-48";
-
+Console.WriteLine("Total de Funcionários: " + Funcionario.totalDeFuncionarios);
+Console.WriteLine("-----------------------------------------------------\n");
 Console.WriteLine("Nome: " + pedro.Nome);
 Console.WriteLine("CPF: " + pedro.Cpf);
 Console.WriteLine("Salário: " + pedro.getSalario());
 Console.WriteLine("Bonificação: " + pedro.getBonificacao());
 Console.WriteLine("-----------------------------------------------------\n");
 
-Diretor diretor = new();
+Diretor diretor = new("958741354-55",7000.00);
 diretor.Nome = "Jimmy";
-diretor.Cpf = "958741354-55";
-
+Console.WriteLine("Total de Funcionários: " + Funcionario.totalDeFuncionarios);
+Console.WriteLine("-----------------------------------------------------\n");
 Console.WriteLine("Nome: " + diretor.Nome);
 Console.WriteLine("CPF: " + diretor.Cpf);
 Console.WriteLine("Salário: " + diretor.getSalario());
@@ -35,4 +35,7 @@ gerenciadorDeSalarios.RegistrarSalario(pedro);
 gerenciadorDeSalarios.RegistrarSalario(diretor);
 Console.WriteLine("Total de Bonificação: R$" + gerenciador.getBonificacao());
 Console.WriteLine("Total de Salários: R$" + gerenciadorDeSalarios.getTotalSalario());
+Console.WriteLine("-----------------------------------------------------\n");
+diretor.AumentarSalario();
+Console.WriteLine("Novo Salário: " + diretor.Salario);
 Console.ReadKey();

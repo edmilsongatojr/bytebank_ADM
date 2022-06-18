@@ -11,8 +11,8 @@
         //private int _tipo;
 
         public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
+        public string Cpf { get; private set; }
+        public double Salario { get; protected set; }
 
 
         //public Funcionario(int _tipo)
@@ -20,14 +20,27 @@
         //    this._tipo = _tipo;
         //}
 
-        public double getBonificacao()
+        public virtual double getBonificacao()
         {
             return Salario * 0.1;
         }
 
-        public double getSalario()
+        public virtual double getSalario()
         {
             return Salario = 2000;
+        }
+
+        public static int totalDeFuncionarios { get; private set; }
+        public Funcionario(string cpf,double salario)
+        {
+            Cpf = cpf;
+            Salario = salario;  
+            totalDeFuncionarios++;
+        }
+
+        public virtual void AumentarSalario()
+        {
+            Salario *= 1.1;
         }
     }
 

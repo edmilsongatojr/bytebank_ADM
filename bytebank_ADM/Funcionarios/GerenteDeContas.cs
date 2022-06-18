@@ -1,8 +1,8 @@
 ﻿namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor : Funcionario
+    public class GerenteDeContas : Funcionario
     {
-        public Diretor(string cpf,double salario):base(cpf,salario)
+        public GerenteDeContas(string cpf,double salario):base(cpf,salario)
         {
           
         }
