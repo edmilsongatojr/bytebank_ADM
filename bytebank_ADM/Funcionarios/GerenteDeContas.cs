@@ -2,14 +2,14 @@
 {
     public class GerenteDeContas : Funcionario
     {
-        public GerenteDeContas(string cpf,double salario):base(cpf,salario)
+        public GerenteDeContas(string cpf):base(cpf,4000)
         {
           
         }
         public override double getBonificacao()
         {
 
-            return Salario + base.getBonificacao();
+            return Salario * 0.25;
 
         }
 
@@ -20,7 +20,7 @@
 
         public override void AumentarSalario()
         {
-            this.Salario *= 1.15;
+            this.Salario *= 1.05;
         }
     }
 }

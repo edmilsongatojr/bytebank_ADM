@@ -1,6 +1,6 @@
 ﻿namespace bytebank_ADM.Funcionarios
 {
-    public class Funcionario
+    public abstract class Funcionario
     {
 
         // 0 – funcionário

@@ -2,14 +2,14 @@
 {
     public class Auxiliar : Funcionario
     {
-        public Auxiliar(string cpf,double salario):base(cpf,salario)
+        public Auxiliar(string cpf):base(cpf,2000)
         {
           
         }
         public override double getBonificacao()
         {
 
-            return Salario + base.getBonificacao();
+            return Salario * 0.20;
 
         }
 
@@ -20,7 +20,7 @@
 
         public override void AumentarSalario()
         {
-            this.Salario *= 1.15;
+            this.Salario *= 1.10;
         }
     }
 }
