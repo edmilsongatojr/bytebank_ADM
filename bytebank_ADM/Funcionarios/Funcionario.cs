@@ -19,29 +19,20 @@
         //{
         //    this._tipo = _tipo;
         //}
-
-        public virtual double getBonificacao()
-        {
-            return Salario * 0.1;
-        }
-
-        public virtual double getSalario()
-        {
-            return Salario = 2000;
-        }
-
         public static int totalDeFuncionarios { get; private set; }
-        public Funcionario(string cpf,double salario)
+        public Funcionario(string cpf, double salario)
         {
             Cpf = cpf;
-            Salario = salario;  
+            Salario = salario;
             totalDeFuncionarios++;
         }
+        public abstract double getBonificacao();
 
-        public virtual void AumentarSalario()
-        {
-            Salario *= 1.1;
-        }
+        public abstract double getSalario();
+
+        public abstract void AumentarSalario();
+       
+        
     }
 
 }
