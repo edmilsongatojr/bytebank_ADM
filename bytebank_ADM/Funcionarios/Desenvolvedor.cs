@@ -8,21 +8,8 @@ namespace bytebank_ADM.Funcionarios
 {
     public class Desenvolvedor : Funcionario
     {
-
-        public Desenvolvedor(string cpf) : base(cpf, 3000)
+        public Desenvolvedor(string cpf) : base(3000, cpf)
         {
-
-        }
-        public override double getBonificacao()
-        {
-
-            return Salario * 0.1;
-
-        }
-
-        public override double getSalario()
-        {
-            return Salario;
         }
 
         public override void AumentarSalario()
@@ -30,5 +17,9 @@ namespace bytebank_ADM.Funcionarios
             this.Salario *= 0.15;
         }
 
+        public override double GetBonificacao()
+        {
+            return this.Salario * 0.1;
+        }
     }
 }
